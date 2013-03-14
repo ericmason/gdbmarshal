@@ -1,0 +1,9 @@
+= gdbmarshal
+
+A subclass of GDBM that takes objects as values
+
+== Usage
+	require 'gdbmarshal'
+	db = GDBMarshal.new("somefile.db")
+	db["somekey"] = {:my => 'fancy object'}
+	db.close
