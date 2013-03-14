@@ -2,11 +2,11 @@ require 'gdbm'
 
 class GDBMarshal < GDBM
   def [](key)
-    Marshal.load(super(key))
+    unmarshal(super(key))
   end
 
   def []=(key, val)
-    super(key, Marshal.dump(val))
+    super(key, marshal(val))
   end
 
   # def first
